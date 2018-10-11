@@ -10,7 +10,7 @@ export default class SearchInput extends React.Component {
     onSubmit: PropTypes.func.isRequired,
     placeholder: PropTypes.string
   }
-  
+
   static defaultProps = {
     placeholder: ''
   }
@@ -38,7 +38,7 @@ export default class SearchInput extends React.Component {
           autoCorrect={false}
           value={text}
           placeholder={placeholder}
-          placeholderTextColor="white"
+          placeholderTextColor="black"
           underlineColorAndroid="transparent"
           style={styles.textInput}
           clearButtonMode="always"
@@ -54,13 +54,13 @@ const styles = StyleSheet.create({
   container: {
     height: 40,
     marginTop: 20,
-    backgroundColor: '#666',
+    backgroundColor: 'white',
     marginHorizontal: 40,
     paddingHorizontal: 10,
     borderRadius: 5
   },
   textInput: {
     flex: 1,
-    color: 'white'
+    color: 'black'
   }
 })

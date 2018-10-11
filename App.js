@@ -29,7 +29,7 @@ export default class App extends React.Component {
           error: false,
           location,
           weather,
-          temperature
+          temperature: Number(temperature) * 1.8 + 32
         })
       } catch(e) {
         this.setState({
@@ -49,7 +49,7 @@ export default class App extends React.Component {
       <KeyboardAvoidingView style={styles.container} behavior="padding">
         <StatusBar barStyle="light-content" />
         <ImageBackground
-          source={getImageForWeather('Clear')}
+          source={getImageForWeather(weather)}
           style={styles.imageContainer}
           imageStyle={styles.image}
         >
@@ -72,7 +72,7 @@ export default class App extends React.Component {
                       {weather}
                     </Text>
                     <Text style={[styles.largeText, styles.textStyle]}>
-                      {`${Math.round(temperature)}°C`}
+                      {`${Math.round(temperature)}°F`}
                     </Text>
 
                   </View>
